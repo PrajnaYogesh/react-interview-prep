@@ -14,7 +14,7 @@ if(result){
 }
 }
 
-if(loading){
+if(loading && !data){
     return <h1>Loading...</h1>
 }
 useEffect(()=>{
@@ -24,7 +24,7 @@ useEffect(()=>{
     return (
         <>
         <button onClick={fetchDataFromAPI}>Click me</button>
- <div>{data?  data.title :  "Loading" }</div>
+ <div>{data?  data.title :  "No data available" }</div>
          </>
     )
     
